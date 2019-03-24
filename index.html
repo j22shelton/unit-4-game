@@ -1,65 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/style.css"> 
-	<title></title>
+    <meta charset="UTF-8">
+    <title>Crystals Collector</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
-<body class="wallpaper">
-	
-		<div class="container">
-			<div class="row">
-				<h1 class="header">Crystals Collector</h1>
-			</div>
-				<div class="row">
-					<div class="col-lg-6">
-                        <p>There are four crystals displayed.</p>
-                        <p>The player obtains a random number at the start of the game.</p>
-                        <p>When the player clicks on a crystal, it will add a specific amount of points to the player's total score. </p>
-                        <p>Your game will hide this amount until the player clicks a crystal.</p>
-                        <p>When they do click one, the player's score counter updates.</p>
-                        <p>The player wins if their total score matches the random number from the beginning of the game.</p>
+
+<body>
+    
+    <div class="jumbotron">
+        <h1 class="text-center">Crystals Collector Game!</h1>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <!--Rules-->
+            <div class="col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                    </div>
+                    <div class="panel-body">
+						<p><u>Rules</u></p>
+						<p>The computer picks a random number at the start of the game between 19-120.</p>
+						<p>There are four crystals displayed, and each one is randomly assigned a value between 1 and 12, which varies for each game.</p>
+						<p>The player can click on any of the four crystals an unlimited number of times, to add points to the player's total score. </p>
+                        <p>The player wins if their total score exactly matches the random number from the beginning of the game.</p>
                         <p>The player loses if their score goes above the random number.</p>
-
-					</div>
-				</div>
-				<br>
-				<div class="row">
-					<div class="col-lg-6">Random Number</div>
-					<div class = "col-lg-1"></div>
-					<div class="col-lg-2">
-						<div class="row wins">Wins</div>
-						<div class="row losses">Losses</div>
-					</div>
-				</div>
-				<br>
-				<div class="row"> 
-					<div class="col-lg-3">
-						<div id="img1"></div>
-					</div>
-					<div class="col-lg-3">
-						<div id="img2"></div>
-					</div>
-					<div class="col-lg-3">
-						<div id="img3"></div>
-					</div>
-					<div class="col-lg-3">
-						<div id="img4"></div>
-					</div>
-				</div>
-				<br>
-				<div class="row"> 
-					<div class="col-lg-6">Total score:</div>
-				</div>
-				<br>
-				<div class="row"> 
-					<div class="col-lg-6">Your Score</div>
-				</div>
-		</div>
-	
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
+                    </div>
+                </div>
+            </div>
+            <!-- Results -->
+            <div class="col-lg-6">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h1 class="panel-title"><u>Crystals</u></h1>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="thumbnail">
+                                        <img id="purple" src="https://images-na.ssl-images-amazon.com/images/I/41fzrlD8%2BRL._UY395_.jpg" alt="purple">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="thumbnail">
+                                        <img id="yellow" src="https://images.jtv.com/media/jtv-site/page-images/gemstones/gemstones-toprated-m63a3846-33.jpg" alt="yellow">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="thumbnail">
+                                        <img id="pink" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSvhkQgsGfKeRfzo3M5OsfEPRucdkmsSacIk3zFZd3o_1LpJfd" alt="pink">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="thumbnail">
+                                        <img id="green" src="http://media.liveauctiongroup.net/i/10610/11178913_1.jpg?v=8CE3E2BB5986D40" alt="green">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel">
+                    <div id=total class="panel-heading">
+                        <h3 class="panel-title"><u>Player's Number</u></h3>
+                    </div>
+                    <div class="panel-body">
+                        <h1 id="totalNum"></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><u>Computer's Pick</u></h3>
+                    </div>
+                    <div class="panel-body">
+                        <h1 id="numToGuess"></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><u>Score</u></h3>
+                    </div>
+                    <div class="panel-body">
+                        <h5>Wins: <span id="wins"></span></h5>
+                        <h5>Losses: <span id="losses"></span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
+        </script>
 </body>
+
 </html>

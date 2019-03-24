@@ -1,0 +1,16 @@
+
+
+ .jumbotron {
+    background-color: #cdcefc !important;
+    opacity: 0.55;
+  }
+  
+  .panel-heading {
+    background-color: #d0e766 !important;  
+  }
+  body {
+      background: url("http://images6.fanpop.com/image/photos/38600000/Gemstone-Photography-gemstones-38668610-1024-768.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+    
