@@ -20,6 +20,6 @@ The player wins if their total score exactly matches the random number from the 
 The player loses if their score goes above the random number.
 
 
-Sole contributer:
+Contributer:
 
 Jocelyn Shelton

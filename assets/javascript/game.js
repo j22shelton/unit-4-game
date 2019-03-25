@@ -1,5 +1,5 @@
 
-var randomNum = 19 + Math.floor(Math.random() * 120);
+var randomNum = Math.floor(Math.random() * (120 - 19 +1)) + 19;
 
 
 $("#numToGuess").html(randomNum);
@@ -7,30 +7,49 @@ console.log(randomNum);
 
 
 var purpleGem = 1 + Math.floor(Math.random() * 12);
+
 var yellowGem = 1 + Math.floor(Math.random() * 12);
+
 var pinkGem = 1 + Math.floor(Math.random() * 12);
+
 var greenGem = 1 + Math.floor(Math.random() * 12);
 
 
 var userTotal = 0;
+
 var wins = 0;
+
 var losses = 0;
+
 $("#totalNum").html(userTotal);
+
 $("#wins").html(wins);
+
 $("#losses").html(losses);
 
 
 var reset = function() {
+
     userTotal = 0;
+
     randomNum = 19 + Math.floor(Math.random() * 120);
+
     purpleGem = 1 + Math.floor(Math.random() * 12);
+
     yellowGem = 1 + Math.floor(Math.random() * 12);
+
     pinkGem = 1 + Math.floor(Math.random() * 12);
+
     greenGem = 1 + Math.floor(Math.random() * 12);
+
     console.log(randomNum);
+
     $("#numToGuess").html(randomNum);
+
     $("#totalNum").html(userTotal);
+
     $("#wins").html(wins);
+    
     $("#losses").html(losses);
 }
 
