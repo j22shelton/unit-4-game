@@ -20,6 +20,8 @@ The player wins if their total score exactly matches the random number from the 
 The player loses if their score goes above the random number.
 
 
-Contributer:
+Sole contributer:
 
 Jocelyn Shelton
+
+https://j22shelton.github.io/unit-4-game/
